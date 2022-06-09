@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;600&family=Montserrat:wght@100;200;400&family=Nanum+Gothic:wght@400;700&family=Water+Brush&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mixin para flex-center */
+
+@mixin flex-row-center{
+	display:flex;
+	justify-content:center;
+  align-items: center;
+}
+
+/* Mapa para los colores generales del sitio, para bg y letras */
+
+$colores: (
+  dark: #191919,
+  white:#fff7ec
+);
+
+@import "_header";
+@import "_footer";
+
+.galeria-index {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25vh;
+  .card {
+    width: 42vh;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.5s;
+    img {
+      width: 100%;
+      height: 95%;
+      filter: grayscale(1);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      &:hover{
+        filter: none;
+      }
+    }
+    &:hover{
+        transform: scale(1.1,1.1);
+    }
+    h3 {
+        background-color: map-get($colores , dark );
+        width: 100%;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+  }
+}
+
+.carrousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  .height-img {
+    height: 53vh;
+    width: 100%;
+  }
+}
+
+/*Galeria para Servicios y Nuestros Trabajos*/
+
+.galeria-serv {
+  @extend .galeria-index;
+  gap: 15vh;
+}
+

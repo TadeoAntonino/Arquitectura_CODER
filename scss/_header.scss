@@ -1,0 +1,54 @@
+.header {
+    @include flex-rox-center;
+    height: 5vh;
+    width: 100%;
+    background-color: map-get($colores , dark );
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: map-get($colores , white );
+}
+
+header {
+    img{
+        height: 4vh;
+        width: auto;
+        padding: 0%;
+    }
+    h1 {
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        color: map-get($colores , white );
+        text-decoration: none;
+    }
+
+    a{
+        width: 45%;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        color: map-get($colores , white );
+        text-decoration: none;
+        padding: 1vh;
+    }
+}
+
+.logo {
+    width: 50%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1vh;
+    a{
+        width: 10vh
+    }
+    h1 {
+        margin: 0;
+    }
+}
+
+.navegador {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
