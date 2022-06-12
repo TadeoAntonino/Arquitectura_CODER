@@ -17,7 +17,7 @@
 /* Mapa para los colores generales del sitio, para bg y letras */
 
 $colores: (
-  dark: #191919,
+  black: #191919,
   white:#fff7ec
 );
 
@@ -26,7 +26,8 @@ $colores: (
 
 .galeria-index {
   width: 100%;
-  height: 100%;
+  height: 42vh;
+  background-color: map-get($colores, white );
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -54,30 +55,130 @@ $colores: (
         transform: scale(1.1,1.1);
     }
     h3 {
-        background-color: map-get($colores , dark );
+        background-color: map-get($colores , black ); 
+        color: map-get($colores, white );
         width: 100%;
         text-align: center;
         border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;   
     }
   }
 }
 
-.carrousel {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  .height-img {
-    height: 53vh;
-    width: 100%;
-  }
-}
 
 /*Galeria para Servicios y Nuestros Trabajos*/
 
 .galeria-serv {
   @extend .galeria-index;
-  gap: 15vh;
+  height: 91.5vh;
+  gap: 5vh;
 }
 
+/* Nosotros */
+
+.main-nos {
+  height: 91.5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: map-get($colores , black );
+  .foto-nos {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 50%;
+    img{
+      height: 60vh;
+      border-radius: 10px;
+      margin: 5vh;
+    } 
+  }
+  .text-nos {
+    @extend .foto-nos;
+    justify-content: end;
+    font-size: 2rem;
+    span{
+      font-style: italic;
+      font-weight: bold;
+    }
+  } 
+}
+
+/* Contacto */ 
+
+.contacto {
+  padding: 10vh;
+  width: 100%;
+  height: 91.5vh;
+  @include flex-row-center;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10vh;
+    gap: 5vh;
+
+    .datos {
+      width: 100%;
+      height: 3vh;
+      border-radius: 10px;
+      border-style: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color: map-get($colores, black );
+      text-decoration: none;
+      background-color: map-get($colores, white );
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1,1.1);
+    }
+  }
+  .consulta {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      border-style: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color: map-get($colores , black );
+      text-decoration: none;
+      background-color: map-get($colores, white );
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1,1.1);
+    }
+  }
+  
+  .boton {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 10vh;
+      height: 4vh;
+      border-radius: 10px;
+      border-style: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      color: map-get($colores, black );
+      text-decoration: none;
+      background-color: map-get($colores, white );
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.1,1.1);
+    }
+  } 
+  }
+
+}

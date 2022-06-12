@@ -1,8 +1,8 @@
 .header {
-    @include flex-rox-center;
+    @include flex-row-center;
     height: 5vh;
     width: 100%;
-    background-color: map-get($colores , dark );
+    background-color: map-get($colores , black );
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     color: map-get($colores , white );
@@ -51,4 +51,8 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
+}
+
+a:hover {
+    color: gray;
 }
