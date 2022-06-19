@@ -69,10 +69,11 @@ a:hover {
   color: #fff7ec;
   padding-top: 1%; }
 
+/* Estilos */
 .galeria-index, .galeria-serv {
+  background-image: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #ecdecb, #e7d8c4);
   width: 100%;
   height: 42vh;
-  background-color: #fff7ec;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -113,6 +114,7 @@ a:hover {
 .main-nos {
   height: 91.5vh;
   width: 100%;
+  background-image: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #ecdecb, #e7d8c4);
   display: flex;
   flex-direction: row;
   font-family: 'Montserrat', sans-serif;
@@ -136,67 +138,55 @@ a:hover {
 
 /* Contacto */
 .contacto {
-  padding: 10vh;
-  width: 100%;
   height: 91.5vh;
+  background-image: linear-gradient(to bottom, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fff7ec, #fdf4e9, #fbf2e5, #f9efe2, #f5e9da, #f0e3d3, #ecdecb, #e7d8c4);
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  font-family: 'Montserrat', sans-serif; }
+  justify-content: center; }
   .contacto .form {
+    width: 50%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 10vh;
-    gap: 5vh; }
-    .contacto .form .datos {
-      width: 100%;
-      height: 3vh;
-      border-radius: 10px;
-      border-style: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      color: #191919;
-      text-decoration: none;
-      background-color: #fff7ec;
-      transition: transform 0.5s; }
-      .contacto .form .datos:hover {
-        transform: scale(1.1, 1.1); }
-    .contacto .form .consulta {
-      text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 3vh; }
+    .contacto .form .form-2 {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      width: auto;
-      height: auto;
+      gap: 3vh; }
+      .contacto .form .form-2 div .datos, .contacto .form .form-2 div .consulta, .contacto .form .form-2 div .boton {
+        background-color: #191919;
+        color: #fff7ec;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 40vh;
+        height: 3vh;
+        border-radius: 10px;
+        border-style: none;
+        transition: transform 0.5s; }
+        .contacto .form .form-2 div .datos:hover, .contacto .form .form-2 div .consulta:hover, .contacto .form .form-2 div .boton:hover {
+          transform: scale(1.1, 1.1); }
+      .contacto .form .form-2 div .consulta {
+        height: 15vh;
+        width: 60vh; }
+      .contacto .form .form-2 div .boton {
+        width: 10vh; }
+  .contacto .mapa {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh; }
+    .contacto .mapa iframe {
       border-radius: 10px;
-      border-style: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      color: #191919;
-      text-decoration: none;
-      background-color: #fff7ec;
       transition: transform 0.5s; }
-      .contacto .form .consulta:hover {
-        transform: scale(1.1, 1.1); }
-    .contacto .form .boton {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 10vh;
-      height: 4vh;
-      border-radius: 10px;
-      border-style: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
-      color: #191919;
-      text-decoration: none;
-      background-color: #fff7ec;
-      transition: transform 0.5s; }
-      .contacto .form .boton:hover {
+      .contacto .mapa iframe:hover {
         transform: scale(1.1, 1.1); }
